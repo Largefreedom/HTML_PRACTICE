@@ -1,0 +1,126 @@
+:root {
+    --bg-left-mask-color: rgba(0,0,0,0.5);
+    --bg-right-mask-color: rgba(255,0,0,0.2);
+    --btn-hover-left-color: #5754ec;
+    --btn-hover-right-color: #1c7a1c;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.split {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+
+
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    background-color: var(--bg-left-mask-color);
+    height: 100%;
+    width: 100%;
+}
+
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    background-color: var(--bg-right-mask-color);
+    height: 100%;
+    width: 100%;
+}
+
+.split.left {
+    left: 0;
+    background-image: url('static/00220-1828018965.png');
+    background-size: cover;
+    background-position: center;
+}
+.split.right {
+    right: 0;
+    background-image: url('static/00228-1828018972.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all  1s ease-in-out ;
+}
+
+h1 {
+    font-size: 5rem;
+    color: white;
+    z-index: 90;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.btn {
+    color: white;
+    border: 3px solid white;
+    z-index: 90;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    padding-inline: 4rem;
+    padding-block: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+
+.hover-left.left {
+    width: 75%;
+    
+}
+
+.hover-left.right {
+    width: 25%;
+    
+}
+
+.hover-right.left {
+    width: 25%;
+    
+}
+
+.hover-right.right {
+    width: 75%;
+    
+}
+
+.split.left .btn:hover {
+    background-color: var(--btn-hover-left-color);
+}
+
+
+.split.right .btn:hover {
+    background-color: var(--btn-hover-right-color);
+}
+

@@ -1,0 +1,49 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5rem;
+}
+
+.panel{
+    height: 80vh;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: white;
+    font-size: 2rem;
+    flex: 0.5;
+    transition: all 700ms ease-in;
+}
+
+
+.panel h3 {
+    opacity: 0;
+    margin-left: 1rem;
+}
+
+.panel.active {
+    flex: 5;
+  
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 200ms ease-in 0.4s;
+}
