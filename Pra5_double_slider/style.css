@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vm;
+    overflow: hidden;
+}
+
+.left-side {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 40%;
+    transition: 0.4s ease-in-out;
+    transform: translateY(0%);
+}
+
+
+.left-side div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side {
+    position: absolute;
+    bottom:0;
+    right:0;
+    height: 100vh;
+    width: 60%;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-300%);
+}
+
+.right-side div {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.down-button{
+    position: absolute;
+    left:40%;
+    top:50%;
+    font-size: 2rem;
+    color:gray;
+    background-color: white;
+    border: none;
+    border-radius: 0.2rem;
+    transform: translate(-100%,-100%);
+}
+
+.down-button:hover {
+    color:black;
+}
+
+.up-button{
+    position: absolute;
+    left:40%;
+    top:50%;
+    font-size: 2rem;
+    color:gray;
+    background-color: white;
+    border: none;
+    border-radius: 0.2rem; 
+}
+
+.up-button:hover {
+    color:black;
+}
