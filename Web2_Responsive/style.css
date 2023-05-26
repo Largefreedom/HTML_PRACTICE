@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-style: normal;
+
+
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+
+.head {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+
+
+}
+
+.logo {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.menu-bar {
+    display: flex;
+    gap: 3rem
+}
+
+.menu-bar li {
+    list-style: none;
+}
+
+.menu-bar li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+
+.menu-bar li a:hover {
+
+    border-bottom: 2px solid white;
+}
+
+#mobile-bar {
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0% 20%;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.content .left {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+
+}
+
+
+.content img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.left .ttag {
+    font-weight: 100;
+
+}
+
+.left .title-top {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.left .title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+
+.left span {
+    display: block;
+}
+
+.left .desc {
+    padding: 0px 5rem 0px 0px;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding-left: 0.5rem;
+    display: flex;
+    gap: 2rem;
+
+}
+
+.btn a {
+    border: 1px solid #4d9559;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 5px 30px;
+    background-color: transparent;
+    transition: all 0.55s ease;
+    cursor: pointer;
+
+}
+
+.btn .left-btn {
+    background-color: #4d9559;
+    transition: all 0.55s ease;
+}
+
+
+.btn a:hover {
+    border: 1px solid white;
+    background-color: transparent;
+    transform: translateX(8px);
+
+}
+
+
+.left-icons {
+    position: fixed;
+    left: 8%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 2rem;
+    transform: translateY(-50%);
+}
+
+.left-icons a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+.left-icons a:hover {
+    transform: translateY(-8px);
+    color: #4d9559;
+}
+
+.top-down {
+    position: fixed;
+    color: #4d9559;
+    font-size: 3rem;
+    right: 5%;
+    bottom: 8%;
+    transition: all 0.3s ease;
+}
+
+.top-down a i {
+    border: 1px dashed gray;
+    border-radius: 2rem;
+
+}
+
+.top-down:hover {
+    color: white;
+    transform: translateY(-8px);
+
+}
+
+@media screen and (max-width: 1042px) {
+
+    .left-icons {
+        display: none;
+    }
+
+
+    .btn a {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .head {
+        padding: 1rem 2rem;
+    }
+
+    .menu-bar {
+        flex-direction: column;
+        position: fixed;
+        right: 0%;
+        border-radius: 10px;
+        top: 8%;
+        gap: 30px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 200px;
+        align-items: center;
+        padding: 20px 0px;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+
+    }
+
+    .menu-bar li {
+        text-align: center;
+
+    }
+
+    .menu-bar.open {
+        transform: translateX(0%);
+    }
+
+
+    #mobile-bar {
+        display: block;
+    }
+
+    .left-icons {
+        display: none;
+    }
+
+    .center {
+        margin-top: 5rem;
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 0.5rem;
+        /* padding-left: 2rem; */
+        /* margin-left: 2rem; */
+        padding: 0%;
+        align-items: center;
+    }
+
+    .left .title-top {
+        margin-top: 1.5rem;
+    }
+
+    .left .title {
+        margin-bottom: 1rem;
+    }
+
+    .left .desc {
+        padding-right: 1rem;
+    }
+
+
+
+    .content {
+        gap: 1rem;
+    }
+
+
+    .top-down {
+        bottom: 5%;
+        transform: translateY(50%);
+        right: 5%;
+    }
+
+
+
+}
